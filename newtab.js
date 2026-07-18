@@ -136,15 +136,15 @@ function generateContributionGraph() {
 
 function updateDashboard(eventName, targetDate, createdAt) {
   const today = new Date();
-  const target = new Date(targetDate);
-  const created = new Date(createdAt);
+  const target = parseDateInput(targetDate);
+  const created = parseDateInput(createdAt);
 
-  const diffTime = target - today;
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffDays = getDaysLeft(targetDate, today);
+  const weeksLeft = getWeeksLeft(targetDate, today);
 
   eventTitleEl.textContent = eventName;
   targetDateDisplay.textContent = formatDate(targetDate);
-  currentDateDisplay.textContent = formatDate(today.toISOString().split('T')[0]);
+  currentDateDisplay.textContent = formatDate(getLocalDateString(today));
 
   if (diffDays <= 0) {
     showCelebration(eventName);
@@ -152,7 +152,7 @@ function updateDashboard(eventName, targetDate, createdAt) {
   }
 
   countdownEl.textContent = diffDays;
-  weeksCountEl.textContent = Math.max(0, Math.floor(diffDays / 7));
+  weeksCountEl.textContent = formatWeeksLeft(weeksLeft);
   if (quoteEl) {
     quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
   }
