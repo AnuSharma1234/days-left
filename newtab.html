@@ -16,9 +16,6 @@
       <div class="form-group">
         <input type="date" id="target-date">
       </div>
-      <div class="form-group">
-        <input type="text" id="github-username" placeholder="GitHub username (optional)" autocomplete="off">
-      </div>
       <button id="save-btn" class="btn-primary">Start Counting</button>
     </div>
 
@@ -49,6 +46,17 @@
         </div>
       </div>
 
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text" id="progress-text">0% elapsed</div>
+      </div>
+
+      <div class="quote-container">
+        <div class="quote" id="quote"></div>
+      </div>
+
       <div class="actions">
         <button id="edit-btn" class="btn-secondary">Edit</button>
         <button id="reset-btn" class="btn-danger">Reset</button>
@@ -73,9 +81,6 @@
       </div>
       <div class="form-group">
         <input type="date" id="edit-target-date">
-      </div>
-      <div class="form-group">
-        <input type="text" id="edit-github-username" placeholder="GitHub username (optional)">
       </div>
       <div class="modal-actions">
         <button id="save-edit-btn" class="btn-primary">Save</button>
