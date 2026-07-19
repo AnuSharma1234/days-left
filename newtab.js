@@ -1,14 +1,16 @@
 const quotes = [
-  "The future belongs to those who believe in the beauty of their dreams.",
-  "Every day is a new opportunity to grow closer to your goal.",
-  "Success is the sum of small efforts repeated day in and day out.",
-  "Your limit is not the deadline — it's just a milestone.",
-  "The countdown is on, and every moment counts.",
-  "Dream big, work hard, stay focused.",
-  "Time is your most valuable resource — use it wisely.",
-  "Great things never come from comfort zones.",
-  "Keep going. You're closer than you think.",
-  "The only way to do great work is to love what you do."
+  "Consistency beats intensity when intensity is inconsistent.",
+  "Small daily actions compound into extraordinary results over time.",
+  "Focus on one craft long enough for mastery to appear.",
+  "Slow growth is still growth, and it often lasts the longest.",
+  "What you practice daily becomes the life you build.",
+  "Compounding rewards patience more than speed.",
+  "Deep focus on one thing creates more value than scattered effort.",
+  "Progress that is steady and quiet is often the most reliable.",
+  "The secret is not speed; it is staying in the game long enough.",
+  "A few good hours repeated for years can outgrow sudden bursts.",
+  "Mastery comes from repeated attention, not constant excitement.",
+  "One craft, practiced patiently, becomes your advantage."
 ];
 
 const setupScreen = document.getElementById('setup-screen');
