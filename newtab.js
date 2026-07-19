@@ -25,8 +25,6 @@ const weeksCountEl = document.getElementById('weeks-count');
 const eventTitleEl = document.getElementById('event-title');
 const targetDateDisplay = document.getElementById('target-date-display');
 const currentDateDisplay = document.getElementById('current-date-display');
-const progressFill = document.getElementById('progress-fill');
-const progressText = document.getElementById('progress-text');
 const quoteEl = document.getElementById('quote');
 
 const editBtn = document.getElementById('edit-btn');
@@ -95,17 +93,7 @@ function updateDashboard(eventName, targetDate, createdAt) {
   if (quoteEl) {
     quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
   }
-
-  const totalDays = (target - created) / (1000 * 60 * 60 * 24);
-  const elapsedDays = (today - created) / (1000 * 60 * 60 * 24);
-  const progressPercent = Math.min(100, Math.max(0, (elapsedDays / totalDays) * 100));
-
-  if (progressFill) {
-    progressFill.style.width = `${progressPercent}%`;
-  }
-  if (progressText) {
-    progressText.textContent = `${Math.round(progressPercent)}% elapsed`;
-  }
+ 
 }
 
 function showCelebration(eventName) {

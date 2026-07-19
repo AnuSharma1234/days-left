@@ -7,8 +7,6 @@
   --accent: #ffffff;
   --accent-muted: #cccccc;
   --border: #222222;
-  --progress-bg: #1a1a1a;
-  --progress-fill: #ffffff;
   --card-shadow: 0 0 0;
   --quote-color: #666666;
 }
@@ -235,30 +233,7 @@ input::placeholder {
 .progress-container {
   margin-bottom: 2rem;
 }
-
-.progress-bar {
-  width: 100%;
-  max-width: 400px;
-  height: 8px;
-  background: var(--progress-bg);
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.progress-fill {
-  height: 100%;
-  background: var(--progress-fill);
-  border-radius: 4px;
-  transition: width 0.5s ease;
-  width: 0%;
-}
-
-.progress-text {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
+ 
 
 .quote-container {
   margin-bottom: 2rem;
